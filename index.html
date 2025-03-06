@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrovet E-Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h1>Agrovet Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Welcome to Agrovet Store</h2>
+        <p>Your one-stop shop for quality agrochemicals, seeds, and farming tools.</p>
+        <button id="shop-now-btn" class="btn">Shop Now</button>
+    </section>
+
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to Agrovet Store</h2>
+            <div class="tabs">
+                <button id="login-tab" class="tab-button active">Login</button>
+                <button id="signup-tab" class="tab-button">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <h3>Login</h3>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <h3>Signup</h3>
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Catalog -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/pesticide.jpg" alt="Pesticide">
+                <h3>Organic Pesticide</h3>
+                <p>KSh 1,500</p>
+                <button onclick="addToCart('Organic Pesticide', 1500)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images/fertilizer.jpg" alt="Fertilizer">
+                <h3>NPK Fertilizer</h3>
+                <p>KSh 2,000</p>
+                <button onclick="addToCart('NPK Fertilizer', 2000)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images/animal-feed.jpg" alt="Animal Feed">
+                <h3>Animal Feed</h3>
+                <p>KSh 1,200</p>
+                <button onclick="addToCart('Animal Feed', 1200)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: KSh <span id="cart-total">0</span></p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2023 Agrovet Store. All rights reserved.</p>
+        <p>Contact: info@agrovetstore.com | +254 700 000 000</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
